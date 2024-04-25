@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'TTLakes-Bold';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: local('/fonts/TT Lakes Bold'), local('fonts/TTLakes-Bold'),
+        url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Bold.woff') format('woff'),
+        url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTLakes-Medium';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: local('fonts/TT Lakes Medium'), local('fonts/TTLakes-Medium'),
+        url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Medium.woff') format('woff'),
+        url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTLakes-Regular';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: local('fonts/TT Lakes Regular'), local('fonts/TTLakes-Regular'),
+        url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #F8F8F8;
+}
+
+body{
+    font-family: "TTLakes-Regular";
+    color: #F8F8F8;
+    letter-spacing: -0.2px;
+}
+
+header{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+footer{
+    margin-top: auto;
+    border-top: 1px solid #D9FFF5;
+}
+textarea{
+    resize: none;
+}
+
+.side-menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 24px 32px 24px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    width: 320px;
+    min-height: 100%;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.side-menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.side-menu__top{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.side-menu__bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.side-menu__list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.side-menu__item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 24px;
+    border: 4px solid transparent;
+}
+.side-menu__item:hover::before{
+    border-left-color: #41F6D7;
+    transition: 0.3s;
+}
+.side-menu__link{
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    transition: 0.7s;
+}
+
+.side-menu__link:hover{
+    color: #7E7E82;
+    transition: 0.7s;
+}
+.side-menu__link--tel{
+    font-family: "TTLakes-Bold";
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+
+.side-menu__contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.side-menu__language{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.side-menu__label{
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #1B1C21;
+}
+.side-menu__label:hover{
+    color: #FF3E79;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__group{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu__link{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FF3E79;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu__link:hover{
+    background-color: #ffc6d0;
+    transition: 0.7s;
+}
+
+.menu__link--burger-exit {
+    background-image: url(img/burger-exit.svg);
+}
+
+.menu__link--search {
+    background-image: url(img/search.svg);
+}
+
+.menu__link--chat {
+    background-image: url(img/chat.svg);
+}
+
+.menu__link--call {
+    background-image: url(img/call.svg);
+}
+
+.menu__link--profile {
+    background-image: url(img/profile.svg);
+}
+
+.menu__link--group {
+    width: 96px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    background-image: url(img/group.svg);
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label{
+    color: #7E7E82;
+}
+
