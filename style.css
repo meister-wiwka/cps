@@ -174,8 +174,8 @@ textarea{
     background-repeat: no-repeat;
     background-position: center;
 }
-.service-card:hover .service-card__icon{
-    background: #ffc6d0;
+.service-card__icon:hover{
+    background-color: #ffc6d0;
     border-color: #ffc6d0;
 }
 
