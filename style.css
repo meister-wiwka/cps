@@ -174,10 +174,6 @@ textarea{
     background-repeat: no-repeat;
     background-position: center;
 }
-.service-card__icon:hover{
-    background-color: #ffc6d0;
-    border-color: #ffc6d0;
-}
 
 .expand-button{
     width: min-content;
