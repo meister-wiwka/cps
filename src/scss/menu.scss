@@ -1,0 +1,128 @@
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title .menu{
+    display: none;
+}
+
+.side-menu__contacts .menu{
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.menu__group{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu__item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.menu__item--disabled{
+    display: none;
+}
+.menu__item--divider::before{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background-color: $color-divider;
+}
+.menu__item--divider:nth-child(2)::before{
+    display: none;
+}
+
+.menu__link{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-button;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu__link--burger {
+    background-image: url(../img/burger.svg);
+}
+.menu__link--group {
+    width: 96px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    background-image: url(../img/group.svg);
+}
+.menu__link--call {
+    background-image: url(../img/call.svg);
+}
+.menu__link--chat {
+    background-image: url(../img/chat.svg);
+}
+.menu__link--profile{
+    background-image: url(../img/profile.svg);
+}
+.menu__link--repair {
+    background-image: url(../img/repair.svg);
+}
+.menu__link--check {
+    background-image: url(../img/check-status.svg);
+}
+
+.menu__link--burger-exit {
+    background-image: url(../img/burger-exit.svg);
+}
+
+.menu__link--search {
+    background-image: url(../img/search.svg);
+}
+
+.menu__link:hover{
+    color: $color-button;
+}
+.menu__link:hover .menu__icon{
+    background: #ffc6d0;
+}
+
+.menu__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-button;
+}
+
+.menu__text{
+    font-family: "TTLakes-Medium";
+	font-size: $text-size-m;
+	line-height: 40px;
+	letter-spacing: -0.2px;
+	font-weight: 500;
+	color: $color-text;
+}
+
+@media (min-width: $window-width-m) {
+    .menu__item--divider:nth-child(2)::before{
+        display: block;
+    }
+}
+
+@media (min-width: $window-width-x) {
+    .main-title .menu{
+        display: flex;
+        margin: 0;
+        gap: 32px
+    }
+    
+    .menu__link{
+        gap: 8px;
+    }
+}

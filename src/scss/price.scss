@@ -1,0 +1,185 @@
+.price__item{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 120px;
+    grid-template-areas: 
+        "description    description"
+        "cost           cost"
+        "time           button";
+    align-items: end;
+    row-gap: 16px;
+    padding: $padding-s;
+    height: 158px;
+    color: $color-text;
+    background: $color-background;
+    border-radius: 6px;
+}
+.price__item--title{
+    display: none;
+    color: $color-text-lighter;
+    opacity: 0.72;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.price__text{
+    font-size: $text-size-s;
+    line-height: $line-height-s;
+    letter-spacing: 0.2px;
+}
+.price__text::before{
+    display: block;
+    font-family: "TTLakes-Medium";
+    color: $color-text-lighter;
+}
+.price__text--description{
+    grid-area: description;
+    align-self: start;
+}
+.price__text--description::before{
+    content: "Ремонтные услуги";
+}
+.price__text--cost{
+    grid-area: cost;
+}
+.price__text--cost::before{
+    content: "Цена";
+}
+.price__text--time{
+    grid-area: time;
+}
+.price__text--time::before{
+    content: "Срок";
+}
+
+.price__button{
+    grid-area: button;
+    font-family: "TTLakes-Bold";
+    text-transform: uppercase;
+    padding: 4px 40px 4px 12px;
+    border: none;
+    border-radius: 16px;
+    background: $color-button;
+    font-size: $text-button;
+    line-height: $line-height-button;
+    letter-spacing: -0.15px;
+    color: $color-button-text;
+    transition: 0.3s;
+}
+.price__button::after{
+    content: "";
+    position: absolute;
+    padding-left: $padding-s;
+    width: 24px;
+    height: 24px;
+    background: url("../img/dropdown-white.svg") no-repeat 50% 50%;
+}
+.price__button:hover{
+    background: #ffc6d0;
+}
+
+.price__comment{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: $padding-s;
+    max-width: 288px;
+}
+
+.price__link{
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: $text-size-m;
+    line-height: $line-height-m;
+    letter-spacing: -0.2px;
+    color: $color-text;
+    font-family: "TTLakes-Medium";
+    transition: 0.15s;
+}
+.price__link:hover{
+    color: $color-button;
+}
+.price__link::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('../img/dropdown.svg') no-repeat 50% 50%;
+}
+
+@media (min-width: $window-width-m) {
+    .price__layout{
+        display: grid;
+        background: $color-background;
+        border-radius: 6px;
+    }
+
+    .price__item{
+        height: auto;
+        position: relative;
+        grid-template-columns: auto 100px 100px 120px;
+        grid-template-areas: 
+            "description cost time button";
+        align-items: center;
+        row-gap: 0;
+    }
+    .price__item::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 688px;
+        height: 1px;
+        background-color: $color-divider;
+        z-index: 10;
+    }
+    li:last-child .price__item::after{
+        display: none;
+    }
+    .price__item--title{
+        display: grid;
+        background: none;
+        border-radius: none;
+    }
+    .price__item--title::after{
+        display: none;
+    }
+
+    .price__text--description{
+        align-self: auto;
+    }
+    .price__text--description::before{
+        display: none;
+    }
+    .price__text--cost::before{
+        display: none;
+    }
+    .price__text--time::before{
+        display: none;
+    }
+
+    .price__comment{
+        padding-left: $padding-m;
+        max-width: 421px;
+    }
+    
+    .price__link{
+        width: auto;
+    }
+}
+
+@media (min-width: $window-width-x) {
+    .price__item{
+        padding: $padding-s $padding-m;
+        grid-template-columns: auto 210px 210px 120px;
+    }
+    .price__item::after{
+        width: 1008px;
+    }
+    
+    .price__comment{
+        padding-left: $padding-x;
+    }
+}

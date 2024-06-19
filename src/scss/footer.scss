@@ -1,0 +1,44 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: $padding-s 4px;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer__link:hover{
+    color: $color-text-attention;
+    transition: 0.15s;
+}
+
+.footer__text{
+    text-align: center;
+    flex-basis: 33.33%;
+    color: $color-text-lighter;
+    font-family: "TTLakes-Medium";
+    font-size: $text-size-s;
+    line-height: $line-height-s;
+    opacity: 0.72;
+}
+
+@media (min-width: $window-width-m) {
+    .footer{
+        flex-direction: row;
+        gap: 0;
+        padding: $padding-m $padding-m $padding-m;
+    }
+
+    .footer__text{
+        &:first-child{
+            text-align: left;
+        }
+        &:last-child{
+            text-align: right;
+        }
+    }
+}
+@media (min-width: $window-width-x) {
+    .footer{
+        padding: $padding-x $padding-x $padding-m $padding-x;
+    }
+}
