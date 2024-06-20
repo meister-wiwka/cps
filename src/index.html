@@ -14,8 +14,8 @@
                         <div class="menu">
                             <ul class="menu__group">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link menu__link--burger-exit" id="burger">
-                                    </a>
+                                    <button class="menu__button menu__link--burger menu__link--burger-exit">                                       
+                                    </button>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#" class="menu__link menu__link--group">
@@ -62,11 +62,11 @@
                         <div class="side-menu__contacts">
                             <ul class="menu">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link menu__link--call" id="callback">
+                                    <a href="#" class="menu__link menu__link--call">
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link menu__link--chat" id="feedback">
+                                    <a href="#" class="menu__link menu__link--chat">
                                     </a>
                                 </li>
                                 <li class="menu__item">
@@ -101,8 +101,8 @@
                         <div class="menu">
                             <ul class="menu__group">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link menu__link--burger"  id="burger">
-                                    </a>
+                                    <button class="menu__button menu__link--burger menu__link--burger-open">
+                                    </button>
                                 </li>
                                 <li class="menu__item menu__item--divider">
                                     <a href="#" class="menu__link menu__link--group">
@@ -111,12 +111,12 @@
                             </ul>
                             <ul class="menu__group">
                                 <li class="menu__item menu__item--disabled">
-                                    <a href="#" class="menu__link menu__link--call" id="callback">
-                                    </a>
+                                    <button class="menu__button menu__link menu__link--call">
+                                    </button>
                                 </li>
                                 <li class="menu__item menu__item--disabled">
-                                    <a href="#" class="menu__link menu__link--chat" id="feedback">
-                                    </a>
+                                    <button class="menu__button menu__link menu__link--chat">
+                                    </button>
                                 </li>
                                 <li class="menu__item menu__item--disabled">
                                     <a href="#" class="menu__link menu__link--profile">
@@ -445,18 +445,18 @@
                 <div class="modal__container">
                     <div class="modal__wrapper">
                         <div class="menu">
-                            <a href="#" class="menu__link menu__link--burger-exit">
-                            </a>
+                            <button class="menu__button menu__link menu__link--burger-exit">
+                            </button>
                         </div>
                     </div>
                     <div class="modal__title">
                         <h2 class="modal__text">Обратная связь</h2>
                     </div>
                     <form action="#" class="form">
-                        <input type="text" placeholder="Имя" class="form__elem">
-                        <input type="tel" placeholder="Телефон" class="form__elem">
-                        <input type="email" placeholder="Электронная почта" class="form__elem">
-                        <textarea rows="4" placeholder="Сообщение" class="form__elem"></textarea>
+                        <input type="text" name="text" placeholder="Имя" class="form__elem" required>
+                        <input type="tel" name="tel" placeholder="Телефон" class="form__elem" pattern="[0-9]{10}">
+                        <input type="email" name="email" placeholder="Электронная почта" class="form__elem" required>
+                        <textarea rows="4" name="message" placeholder="Сообщение" class="form__elem" required></textarea>
                         <p class="form__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
                         <button type="submit" class="form__button">отправить</button>
                     </form>

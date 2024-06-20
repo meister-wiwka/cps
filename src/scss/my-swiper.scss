@@ -34,11 +34,11 @@
     .swiper{
         width: auto;
         padding: 0 $padding-m;
-    }
-    .swiper::after{
-        display: none;
-    }
 
+        &::after {
+            display: none;
+        }
+    }
     .swiper-wrapper{
         padding: 0;
     }

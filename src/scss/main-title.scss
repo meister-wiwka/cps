@@ -2,20 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.main-title__wrapper{
-    border: 4px solid transparent;
-    border-left: 4px solid $color-border-title;
-    padding-left: 12px;
-}
+    &__wrapper {
+        border: 4px solid transparent;
+        border-left: 4px solid $color-border-title;
+        padding-left: 12px;
+    }
 
-.main-title__text{
-    font-family: "TTLakes-Bold";
-    font-size: $text-size-xl;
-    letter-spacing: -0.6px;
-    line-height: $line-height-xl;
-    margin: 0;
+    &__text {
+        font-family: "TTLakes-Bold";
+        font-size: $text-size-xl;
+        letter-spacing: -0.6px;
+        line-height: $line-height-xl;
+        margin: 0;
+    }
 }
 
 @media (min-width: $window-width-m) {
@@ -27,9 +27,9 @@
 @media (min-width: $window-width-x) {
     .main-title{
         padding-top: $padding-m;
-    }
-    
-    .main-title__wrapper{
-        padding-left: 28px;
+
+        &__wrapper {
+            padding-left: 28px;
+        }
     }
 }

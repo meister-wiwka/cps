@@ -15,6 +15,11 @@
     letter-spacing: -0.2px;
     color: $color-bullet-active;
 }
+
+.form__elem--hidden {
+    display: none;
+}
+
 .form__elem:focus{
     border-color: $color-border-hover;
 }

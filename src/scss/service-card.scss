@@ -6,41 +6,42 @@
     border: 1px solid $color-border;
     border-radius: 6px;
     transition: 0.3s;
-}
-.service-card:hover{
-    border-color: #ffc6d0;
-}
-.service-card--type{
-    height: 128px;
-    align-items: flex-end;
-}
 
-.service-card__text{
-    font-family: "TTLakes-Medium";
-    align-self: flex-start;
-    font-size: $text-size-m;
-    line-height: $line-height-m;
-    color: $color-text;
-}
-
-.service-card--brand {
-    background-image: url(../img/lenovo.svg);
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
-}
-
-.service-card__icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border: 2px solid $color-button;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-image: url(../img/dropdown.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    &:hover{
+        border-color: #ffc6d0;
+    }
+    &--type{
+        height: 128px;
+        align-items: flex-end;
+    }
+    
+    &__text{
+        font-family: "TTLakes-Medium";
+        align-self: flex-start;
+        font-size: $text-size-m;
+        line-height: $line-height-m;
+        color: $color-text;
+    }
+    
+    &--brand {
+        background-image: url(../img/lenovo.svg);
+        background-repeat: no-repeat;
+        background-position: 16px 50%;
+    }
+    
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border: 2px solid $color-button;
+        border-radius: 50%;
+        transition: 0.3s;
+        background-image: url(../img/dropdown.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 .service-card:hover .service-card__icon{
